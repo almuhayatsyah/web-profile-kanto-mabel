@@ -29,9 +29,12 @@ const Hero = () => {
             </h1>
 
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Kanto Mebel menghadirkan koleksi furniture premium dengan desain
-              modern dan kualitas terbaik untuk rumah impian Anda. Dibuat dengan
-              keahlian tinggi dan material pilihan.
+              Kanto Mebel menghadirkan koleksi furniture kantor premium dengan
+              desain modern dan kualitas terbaik untuk menciptakan ruang kerja
+              yang nyaman, produktif, dan profesional. Setiap produk kami dibuat
+              dengan keahlian tinggi dan material pilihan, dirancang untuk
+              mendukung kebutuhan kerja di berbagai jenis lingkungan perkantoran
+              Pendidikan dan Rumah Tangga.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">

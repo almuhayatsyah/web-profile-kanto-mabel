@@ -30,13 +30,19 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center mr-4">
-              <img src={logo} alt="Logo" className="w-16 h-16 object-contain" />
+            <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mr-4">
+              <img
+                src={logo}
+                alt="Logo"
+                className="w-14 h-14 md:w-20 md:h-20 object-contain"
+              />
             </div>
-            {/* <div>
-              <h1 className="text-2xl font-bold text-red-600">Kanto Mebel</h1>
+            <div>
+              <h1 className="text-xl md:text-2xl font-bold text-red-600">
+                Kanto Mebel
+              </h1>
               <p className="text-sm text-gray-600">Furniture Berkualitas</p>
-            </div> */}
+            </div>
           </div>
 
           {/* Desktop Navigation */}
