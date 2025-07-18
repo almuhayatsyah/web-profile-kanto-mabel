@@ -1,4 +1,3 @@
-// src/layouts/Footer.tsx
 import {
   Facebook,
   Instagram,
@@ -11,13 +10,11 @@ import logo from "../asset/img/mabelkanto.png";
 
 const Footer = () => {
   return (
-    // Latar belakang diubah menjadi biru brand
     <footer className="bg-brand-blue text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
             <a href="/" className="flex items-center gap-2">
-              {/* Logo akan terlihat jelas di atas background biru */}
               <img src={logo} alt="Logo Mebel KANTO" className="h-16 w-auto" />
             </a>
             <p className="text-blue-100 text-sm">
@@ -126,7 +123,6 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Kontak</h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                {/* Ikon diubah menjadi putih agar kontras */}
                 <MapPin className="w-5 h-5 text-white mt-1 flex-shrink-0" />
                 <span className="text-blue-100 text-sm">
                   Jl. Teuku Umar No. 123, <br />

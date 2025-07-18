@@ -1,6 +1,4 @@
-// src/layouts/Header.tsx
-
-import { Link } from "react-router-dom"; // <-- PENTING: Impor Link
+import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
 import logo from "../asset/img/mabelkanto.png";
@@ -25,7 +23,6 @@ const Header = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   useOnClickOutside(dropdownRef, () => setActiveDropdown(null));
 
-  // Fungsi untuk menutup semua menu
   const closeAllMenus = () => {
     setIsMenuOpen(false);
     setActiveDropdown(null);
@@ -123,7 +120,6 @@ const Header = () => {
               {link.name}
             </Link>
           ))}
-          {/* ... (sisa kode dropdown mobile) ... */}
           <div className="p-4">
             <Link
               to="/kontak"
