@@ -1,13 +1,19 @@
 import logoBlibli from "../asset/img/blibli.png";
 import logoShopee from "../asset/img/shopee.png";
 import logoTokopedia from "../asset/img/tokopedia.png";
-// import logoecatalogue from "../assets/img/ecatologue.png";
+import logoEcatalog from "../asset/img/ecatalog.png";
+import logoPadiumkm from "../asset/img/padiumkm.png";
+import logoBelapengadaan from "../asset/img/belapengadaan.png";
+import logoLpse from "../asset/img/lpse.png";
 
 const platforms = [
   { name: "Blibli", logo: logoBlibli },
   { name: "Tokopedia", logo: logoTokopedia },
   { name: "Shopee", logo: logoShopee },
-  // { name: 'ecatologue', logo: logoecatalogue },
+  { name: "E-catalogue", logo: logoEcatalog },
+  { name: "Padiumkm", logo: logoPadiumkm },
+  { name: "Belapengadaan", logo: logoBelapengadaan },
+  { name: "LPSE", logo: logoLpse },
 ];
 
 const Platform = () => {

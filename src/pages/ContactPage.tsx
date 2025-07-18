@@ -1,5 +1,4 @@
 import { Building, Mail, Phone } from "lucide-react";
-
 const ContactPage = () => {
   return (
     <section className="bg-gray-50 py-20">
@@ -22,7 +21,7 @@ const ContactPage = () => {
             <ContactCard
               icon={<Phone className="h-6 w-6 text-brand-blue" />}
               title="Telepon / WhatsApp"
-              desc="+62 812-3456-7890"
+              desc="+62 852-7771-1778"
             />
             <ContactCard
               icon={<Mail className="h-6 w-6 text-brand-blue" />}

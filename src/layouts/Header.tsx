@@ -5,15 +5,18 @@ import logo from "../asset/img/mabelkanto.png";
 import { useOnClickOutside } from "../hooks/useOnClickOutside";
 
 const navLinks = [
-  { name: "Beranda", href: "/" },
+  { name: "Beranda", href: "/landing" },
   { name: "Tentang", href: "/tentang" },
 ];
 
 const dropdownLinks = [
-  { name: "E-Katalog", href: "#" },
+  { name: "ecatalogue", href: "" },
   { name: "Blibli", href: "#" },
   { name: "Tokopedia", href: "#" },
   { name: "Shopee", href: "#" },
+  { name: "PadiumKM", href: "#" },
+  { name: "Belapengadaan", href: "#" },
+  { name: "LPSE", href: "#" },
 ];
 
 const Header = () => {

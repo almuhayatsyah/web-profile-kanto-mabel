@@ -136,7 +136,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-white" />
                 <span className="text-blue-100 text-sm">
-                  kontak@mebelkanto.com
+                  kantomebel@gmail.com
                 </span>
               </div>
             </div>

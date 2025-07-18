@@ -1,4 +1,5 @@
 import { Award, Handshake, Target } from "lucide-react";
+import MabelKanonto from "../asset/img/mabelkanto.png";
 
 const AboutPage = () => {
   return (
@@ -6,8 +7,13 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="relative isolate bg-gradient-to-b from-brand-blue/5 via-white to-white py-24 sm:py-32">
         <div className="container mx-auto px-6 text-center">
+          <img
+            src={MabelKanonto}
+            alt="Logo Mebel KANTO"
+            className="mx-auto mb-6 w-24 h-24 sm:w-32 sm:h-32 object-contain"
+          />
           <h1 className="text-4xl sm:text-6xl font-bold mb-6">
-            Mebel Bukan Sekadar Furnitur
+            Kanto Mebel Bukan Sekadar Furniture
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Di balik setiap meja, kursi, dan lemari, ada nilai dan cerita. Kami
@@ -21,7 +27,7 @@ const AboutPage = () => {
       <section className="container mx-auto -mt-20 px-6">
         <div className="overflow-hidden rounded-3xl shadow-xl">
           <img
-            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=2158&auto=format&fit=crop"
+            src="https://images.pexels.com/photos/159213/hall-congress-architecture-building-159213.jpeg"
             alt="Showcase Mebel KANTO"
             className="w-full object-cover aspect-[16/9]"
           />

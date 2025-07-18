@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* swiper untuk hp*/
+@layer utilities {
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply text-brand-blue sm:flex hidden;
+  }
+
+  @media (max-width: 640px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none !important;
+    }
+  }
+}

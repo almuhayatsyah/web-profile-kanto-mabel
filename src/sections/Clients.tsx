@@ -1,12 +1,4 @@
-import logoBapeten from "../asset/img/clients/bapeten.png";
-import logoKemlu from "../asset/img/clients/kemlu.png";
-import logoKpu from "../asset/img/clients/kpu.png";
-
-const clients = [
-  { name: "Komisi Pemilihan Umum", logo: logoKpu },
-  { name: "BAPETEN", logo: logoBapeten },
-  { name: "Badan Narkotika Nasional", logo: logoKemlu },
-];
+import logoInstansi from "../asset/img/clients/logoinstansi.png";
 
 const Clients = () => {
   return (
@@ -16,25 +8,18 @@ const Clients = () => {
           <h2 className="text-2xl font-bold text-gray-900 sm:text-4xl">
             Dipercaya oleh Instansi Ternama
           </h2>
-          <p className="mt-4 text-base text-gray-600">
+          <p className="mt-4 text-base text-gray-500">
             Terlibat langsung dalam pengadaan furnitur untuk lembaga strategis
             di Indonesia.
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
-          {clients.map((client) => (
-            <div
-              key={client.name}
-              className="flex justify-center items-center p-4 bg-white rounded-lg shadow-sm"
-            >
-              <img
-                src={client.logo}
-                alt={client.name}
-                className="object-contain max-w-[100px] h-auto aspect-[1/1] transition-transform hover:scale-105"
-              />
-            </div>
-          ))}
+        <div className="mx-auto mt-16 flex justify-center items-center">
+          <img
+            src={logoInstansi}
+            alt="Logo Instansi"
+            className="object-contain max-w-4xl w-full h-auto rounded-lg shadow-sm"
+          />
         </div>
       </div>
     </div>

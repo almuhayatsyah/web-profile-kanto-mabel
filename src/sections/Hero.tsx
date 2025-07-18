@@ -1,7 +1,6 @@
 import { ArrowRight, Star } from "lucide-react";
-
 const heroImage =
-  "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=2127&auto=format&fit=crop";
+  "https://images.pexels.com/photos/7511749/pexels-photo-7511749.jpeg";
 
 const Hero = () => {
   return (
@@ -54,7 +53,7 @@ const Hero = () => {
                 />
               </div>
               <span className="text-gray-600 text-sm font-medium">
-                Dipercaya oleh 100+ bisnis & pemilik rumah
+                Dipercaya oleh 100+ bisnis, Pemerintahan & pemilik rumah
               </span>
             </div>
           </div>
@@ -68,7 +67,7 @@ const Hero = () => {
             />
             <div className="absolute -bottom-8 -right-8 bg-white p-4 rounded-xl shadow-lg border">
               <h3 className="font-semibold text-gray-900">
-                Set Meja Makan Jati
+                set ruang kerja modern
               </h3>
               <div className="flex items-center mt-1">
                 <div className="flex text-brand-yellow">

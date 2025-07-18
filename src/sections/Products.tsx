@@ -1,14 +1,13 @@
 const products = [
   {
-    name: "Sofa Ruang Tamu",
-    category: "Ruang Tamu",
-    image:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=2070&auto=format&fit=crop",
+    name: "Ruang Kerja Moderen dengan Furnitur Kanto Mebel",
+    category: "Ruang Kantor",
+    image: "https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg",
     href: "#products",
   },
   {
-    name: "Set Meja Makan",
-    category: "Ruang Makan",
+    name: "Set Ruang Keluarga Moderen dengan kanto Mebel",
+    category: "Familly Rooms",
     image:
       "https://images.unsplash.com/photo-1604578762246-41134e37f9cc?q=80&w=1974&auto=format&fit=crop",
     href: "#products",
@@ -16,8 +15,7 @@ const products = [
   {
     name: "Lemari & Kursi Kayu",
     category: "Kamar Tidur",
-    image:
-      "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?q=80&w=2070&auto=format&fit=crop",
+    image: "https://images.pexels.com/photos/245208/pexels-photo-245208.jpeg",
     href: "#products",
   },
 ];
