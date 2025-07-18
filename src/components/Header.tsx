@@ -30,18 +30,12 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mr-4">
+            <div className="flex-shrink-0">
               <img
                 src={logo}
                 alt="Logo"
                 className="w-14 h-14 md:w-20 md:h-20 object-contain"
               />
-            </div>
-            <div>
-              <h1 className="text-xl md:text-2xl font-bold text-red-600">
-                Kanto Mebel
-              </h1>
-              <p className="text-sm text-gray-600">Furniture Berkualitas</p>
             </div>
           </div>
 

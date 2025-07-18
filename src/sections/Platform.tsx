@@ -1,0 +1,42 @@
+import logoBlibli from "../asset/img/blibli.png";
+import logoShopee from "../asset/img/shopee.png";
+import logoTokopedia from "../asset/img/tokopedia.png";
+// import logoecatalogue from "../assets/img/ecatologue.png";
+
+const platforms = [
+  { name: "Blibli", logo: logoBlibli },
+  { name: "Tokopedia", logo: logoTokopedia },
+  { name: "Shopee", logo: logoShopee },
+  // { name: 'ecatologue', logo: logoecatalogue },
+];
+
+const Platform = () => {
+  return (
+    <section className="bg-slate-50 py-16 sm:py-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <h2 className="text-base font-semibold leading-7 text-brand-blue">
+          Layanan Pengadaan
+        </h2>
+        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Tersedia di Berbagai Platform Terpercaya
+        </p>
+        <div className="mx-auto mt-16 max-w-lg grid grid-cols-1 gap-y-12 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-0">
+          {platforms.map((platform) => (
+            <div
+              key={platform.name}
+              className="flex justify-center items-center transition-transform hover:scale-110"
+            >
+              <img
+                className="max-h-16 sm:max-h-20 w-auto object-contain"
+                src={platform.logo}
+                alt={platform.name}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Platform;

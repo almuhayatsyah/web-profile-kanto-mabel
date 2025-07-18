@@ -1,25 +1,21 @@
-import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Brands from './components/Brands';
-import Partnership from './components/Partnership';
-import SupportedBy from './components/SupportedBy';
-import Products from './components/Products';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { Route, Routes } from "react-router-dom";
+import Footer from "./layouts/Footer";
+import Header from "./layouts/Header";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <Hero />
-      <About />
-      <Brands />
-      <Partnership />
-      <SupportedBy />
-      <Products />
-      <Contact />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/kontak" element={<ContactPage />} />
+          <Route path="/tentang" element={<AboutPage />} />{" "}
+        </Routes>
+      </main>
       <Footer />
     </div>
   );
