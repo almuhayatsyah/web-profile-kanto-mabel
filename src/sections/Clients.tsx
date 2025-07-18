@@ -1,4 +1,4 @@
-import logoInstansi from "../asset/img/clients/logoinstansi.png";
+import logoInstansi from "../asset/img/clients/logoInstansi.png";
 
 const Clients = () => {
   return (
