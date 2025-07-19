@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../asset/img/mabelkanto.png";
 import { useOnClickOutside } from "../hooks/useOnClickOutside";
 
 const navLinks = [
-  { name: "Beranda", href: "/landing" },
+  { name: "Beranda", href: "/" },
   { name: "Tentang", href: "/tentang" },
 ];
 
 const dropdownLinks = [
-  { name: "ecatalogue", href: "" },
+  { name: "e-Catalogue", href: "" },
   { name: "Blibli", href: "#" },
   { name: "Tokopedia", href: "#" },
   { name: "Shopee", href: "#" },
@@ -123,6 +123,41 @@ const Header = () => {
               {link.name}
             </Link>
           ))}
+
+          {/* Dropdown Toko Online untuk Mobile */}
+          <div>
+            <button
+              onClick={() =>
+                setActiveDropdown(
+                  activeDropdown === "mobile-toko" ? null : "mobile-toko"
+                )
+              }
+              className="w-full flex justify-between items-center px-4 py-3 text-gray-700 hover:bg-gray-100"
+            >
+              <span>Toko Online</span>
+              <ChevronDown
+                className={`w-5 h-5 transition-transform ${
+                  activeDropdown === "mobile-toko" ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+            {activeDropdown === "mobile-toko" && (
+              <div className="bg-gray-100 pl-8 pr-4 py-2">
+                {dropdownLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block py-2 text-sm text-gray-600 hover:text-brand-blue"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+
           <div className="p-4">
             <Link
               to="/kontak"

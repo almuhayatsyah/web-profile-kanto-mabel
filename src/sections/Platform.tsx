@@ -1,10 +1,10 @@
+import logoBelapengadaan from "../asset/img/belapengadaan.png";
 import logoBlibli from "../asset/img/blibli.png";
+import logoEcatalog from "../asset/img/ecatalog.png";
+import logoLpse from "../asset/img/lpse.png";
+import logoPadiumkm from "../asset/img/padiumkm.png";
 import logoShopee from "../asset/img/shopee.png";
 import logoTokopedia from "../asset/img/tokopedia.png";
-import logoEcatalog from "../asset/img/ecatalog.png";
-import logoPadiumkm from "../asset/img/padiumkm.png";
-import logoBelapengadaan from "../asset/img/belapengadaan.png";
-import logoLpse from "../asset/img/lpse.png";
 
 const platforms = [
   { name: "Blibli", logo: logoBlibli },
@@ -26,7 +26,7 @@ const Platform = () => {
         <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Tersedia di Berbagai Platform Terpercaya
         </p>
-        <div className="mx-auto mt-16 max-w-lg grid grid-cols-1 gap-y-12 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-0">
+        <div className="mx-auto mt-16 max-w-5xl grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4">
           {platforms.map((platform) => (
             <div
               key={platform.name}

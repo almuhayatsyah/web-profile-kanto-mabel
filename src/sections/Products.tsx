@@ -6,8 +6,8 @@ const products = [
     href: "#products",
   },
   {
-    name: "Set Ruang Keluarga Moderen dengan kanto Mebel",
-    category: "Familly Rooms",
+    name: "Set Ruang Keluarga Moderen dengan Kanto Mebel",
+    category: "Family Rooms",
     image:
       "https://images.unsplash.com/photo-1604578762246-41134e37f9cc?q=80&w=1974&auto=format&fit=crop",
     href: "#products",
@@ -26,15 +26,15 @@ const Products = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-base font-semibold leading-7 text-brand-blue">
-            Produk Unggulan
+            Inspirasi Ruangan
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Koleksi Pilihan untuk Setiap Ruangan
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Setiap produk kami rancang dengan detail dan dibuat dari material
-            terbaik untuk memastikan keindahan dan ketahanan yang akan
-            melengkapi ruangan Anda.
+            Produk kami cocok untuk kebutuhan rumah, kantor, hingga usaha
+            seperti kafe dan coworking space. Temukan inspirasi ruangan impian
+            Anda.
           </p>
         </div>
 
@@ -58,15 +58,6 @@ const Products = () => {
               </div>
             </a>
           ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <a
-            href="/kontak"
-            className="inline-block rounded-lg bg-brand-blue px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-opacity-90 transition"
-          >
-            Diskusikan Kebutuhan Anda
-          </a>
         </div>
       </div>
     </section>

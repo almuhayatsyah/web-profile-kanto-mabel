@@ -9,19 +9,20 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="text-center lg:text-left">
             <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-gray-900">
-              Wujudkan Ruang Impian Anda dengan Mebel
+              KANTO MEBEL
               <span className="text-brand-blue block mt-2">
-                Desain Kustom & Berkualitas
+                Solusi Furnitur untuk Semua Kebutuhan
               </span>
             </h1>
+
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Mebel KANTO adalah mitra terpercaya Anda dalam pengadaan dan
-              pembuatan mebel kustom untuk rumah, kantor, dan bisnis. Kualitas
-              dan kepuasan Anda adalah prioritas kami.
+              Pilihan lengkap dari brand ternama & produk lokal. Bikin ruang
+              makin nyaman dan fungsional.
             </p>
+
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <a
-                href="#products"
+                href="#brands"
                 className="w-full sm:w-auto bg-brand-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition-colors duration-200 flex items-center justify-center gap-2 group"
               >
                 <span>Lihat Koleksi Unggulan</span>
@@ -53,12 +54,11 @@ const Hero = () => {
                 />
               </div>
               <span className="text-gray-600 text-sm font-medium">
-                Dipercaya oleh 100+ bisnis, Pemerintahan & pemilik rumah
+                Dipercaya oleh 100+ kantor, instansi, dan pemilik rumah di
+                seluruh Indonesia
               </span>
             </div>
           </div>
-
-          {/* Kolom Gambar */}
           <div className="relative hidden lg:block">
             <img
               src={heroImage}
@@ -67,7 +67,7 @@ const Hero = () => {
             />
             <div className="absolute -bottom-8 -right-8 bg-white p-4 rounded-xl shadow-lg border">
               <h3 className="font-semibold text-gray-900">
-                set ruang kerja modern
+                Set Ruang Kerja Modern
               </h3>
               <div className="flex items-center mt-1">
                 <div className="flex text-brand-yellow">

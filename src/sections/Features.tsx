@@ -2,30 +2,26 @@ import { MessageSquareHeart, Palette, Ruler, ShieldCheck } from "lucide-react";
 
 const features = [
   {
-    name: "Kualitas Terjamin",
-    description:
-      "Dibuat dari material kayu solid pilihan yang diproses secara teliti untuk menjamin kekuatan dan ketahanan produk.",
+    name: "Material Berkualitas",
+    description: "Kayu solid, kuat, dan tahan lama.",
     icon: ShieldCheck,
     bgColor: "bg-brand-blue",
   },
   {
-    name: "Desain Kustom",
-    description:
-      "Wujudkan furnitur impian Anda. Kami siap melayani pesanan kustom sesuai dengan ukuran, model, dan gaya yang Anda inginkan.",
+    name: "Pesan Desain Sendiri",
+    description: "Custom ukuran & gaya sesuai kebutuhan.",
     icon: Ruler,
     bgColor: "bg-brand-red",
   },
   {
-    name: "Finishing Premium",
-    description:
-      "Menggunakan teknik dan bahan finishing berkualitas tinggi yang tidak hanya indah, tapi juga melindungi mebel dari cuaca dan goresan.",
+    name: "Finishing Rapi",
+    description: "Warna tahan gores & tahan lama.",
     icon: Palette,
     bgColor: "bg-brand-yellow",
   },
   {
-    name: "Layanan Responsif",
-    description:
-      "Tim kami siap membantu Anda dari tahap konsultasi desain hingga proses pengiriman dengan ramah dan solutif.",
+    name: "Respon Cepat",
+    description: "Bisa konsultasi langsung & fast respon.",
     icon: MessageSquareHeart,
     bgColor: "bg-slate-800",
   },
@@ -37,15 +33,14 @@ const Features = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-2xl mx-auto lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-brand-blue">
-            Keunggulan Kami
+            Alasan Memilih Kami
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Mengapa Memilih Mebel KANTO?
+            Kanto Mebel Bukan Sekadar Furnitur
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Kami tidak hanya membuat mebel, kami menciptakan karya seni
-            fungsional yang dibangun untuk bertahan lama dan memperindah ruangan
-            Anda.
+            Kami bantu wujudkan ruang yang fungsional, estetis, dan sesuai
+            selera Anda.
           </p>
         </div>
         <div className="mt-16 max-w-2xl mx-auto sm:mt-20 lg:mt-24 lg:max-w-none">

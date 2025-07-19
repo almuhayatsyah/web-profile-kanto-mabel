@@ -1,15 +1,19 @@
 import { CheckCircle2 } from "lucide-react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Impor CSS untuk Swiper
 import "swiper/css";
 import "swiper/css/navigation";
 
+// Data untuk gambar slider
 const aboutImages = [
   "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=2070&q=80",
   "https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg",
   "https://images.unsplash.com/photo-1604328702728-d26d2062c20b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
 
+// Data untuk daftar fitur
 const features = [
   "Bahan premium dan tahan lama",
   "Dibuat oleh pengrajin lokal berpengalaman",
@@ -21,49 +25,42 @@ const About = () => {
   return (
     <section id="about" className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        {/* Gambar Slider */}
+        {/* Kolom Gambar Slider */}
         <div className="w-full">
           <Swiper
             modules={[Navigation, Autoplay]}
-            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
             navigation
             loop
-            spaceBetween={20}
-            breakpoints={{
-              320: { slidesPerView: 1 },
-              768: { slidesPerView: 1 },
-              1024: { slidesPerView: 1 },
-            }}
-            className="w-full"
+            slidesPerView={1}
+            className="w-full rounded-3xl shadow-2xl"
           >
             {aboutImages.map((img, index) => (
               <SwiperSlide key={index}>
-                <div className="w-full">
-                  <img
-                    src={img}
-                    alt={`Slide ${index + 1}`}
-                    className="rounded-3xl shadow-xl w-full object-cover aspect-[4/3] max-h-[400px] sm:max-h-[500px] lg:max-h-[600px]"
-                  />
-                </div>
+                <img
+                  src={img}
+                  alt={`Interior Mebel KANTO ${index + 1}`}
+                  className="w-full object-cover aspect-[4/3]"
+                />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
 
-        {/* Konten Deskripsi */}
+        {/* Kolom Konten Deskripsi */}
         <div>
           <h2 className="text-brand-blue text-sm font-semibold uppercase tracking-widest mb-2">
             Tentang Kami
           </h2>
           <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
-            Furnitur yang Dirancang <br className="hidden sm:block" /> dengan
-            Hati dan Tujuan
+            Menghadirkan Furnitur Berkualitas
           </h3>
           <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
-            Di KANTO MEBEL, kami percaya bahwa furnitur bukan sekadar benda. Ia
-            adalah bagian dari cerita hidup, tempat kenangan tercipta dan
-            hari-hari dijalani. Karena itu, kami hadirkan produk yang menyatu
-            antara fungsi, kualitas, dan jiwa.
+            KANTO MEBEL adalah perusahaan yang fokus pada penyediaan furniture
+            kantor berkualitas tinggi dengan desain fungsional dan harga
+            bersaing. Kami berkomitmen untuk memahami kebutuhan konsumen,
+            membangun kemitraan yang kuat, dan terus bertumbuh sebagai penyedia
+            solusi terbaik di industri ini.
           </p>
 
           <ul className="mt-8 space-y-4">
