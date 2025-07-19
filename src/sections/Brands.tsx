@@ -26,7 +26,7 @@ const brandsData: Brand[] = [
           "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?q=80&auto=format&fit=crop&h=300&w=400",
       },
       {
-        name: "Lemari Arsip Besi",
+        name: "Lemari Arsip ",
         image:
           "https://images.unsplash.com/photo-1585030044487-7c7b8b5c9b31?q=80&auto=format&fit=crop&h=300&w=400",
       },
@@ -36,7 +36,7 @@ const brandsData: Brand[] = [
     name: "Chitose",
     products: [
       {
-        name: "Kursi Susun Pesta",
+        name: "Kursi Kantor",
         image:
           "https://images.unsplash.com/photo-1519947486511-46149fa0a254?q=80&auto=format&fit=crop&h=300&w=400",
       },
@@ -46,7 +46,7 @@ const brandsData: Brand[] = [
           "https://images.pexels.com/photos/190537/pexels-photo-190537.jpeg?auto=compress&cs=tinysrgb&h=300&w=400",
       },
       {
-        name: "Kursi Tunggu Bandara",
+        name: "Kursi Gamin",
         image:
           "https://images.unsplash.com/photo-1505826759037-406b40feb4cd?q=80&auto=format&fit=crop&h=300&w=400",
       },

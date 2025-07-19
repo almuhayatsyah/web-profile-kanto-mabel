@@ -53,7 +53,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/#products"
+                  to="/brands"
                   className="text-gray-600 hover:text-brand-blue transition-colors"
                 >
                   Produk Unggulan
@@ -69,7 +69,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/#features"
+                  to="/fitur"
                   className="text-gray-600 hover:text-brand-blue transition-colors"
                 >
                   Keunggulan

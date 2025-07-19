@@ -10,7 +10,7 @@ const navLinks = [
 ];
 
 const dropdownLinks = [
-  { name: "e-Catalogue", href: "" },
+  { name: "e-Catalogue", href: "#" }, // Pastikan href diisi link yang benar nanti
   { name: "Blibli", href: "#" },
   { name: "Tokopedia", href: "#" },
   { name: "Shopee", href: "#" },
@@ -21,14 +21,16 @@ const dropdownLinks = [
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isDesktopDropdownOpen, setIsDesktopDropdownOpen] = useState(false);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
 
-  const dropdownRef = useRef<HTMLDivElement>(null);
-  useOnClickOutside(dropdownRef, () => setActiveDropdown(null));
+  const desktopDropdownRef = useRef<HTMLDivElement>(null);
+  useOnClickOutside(desktopDropdownRef, () => setIsDesktopDropdownOpen(false));
 
   const closeAllMenus = () => {
     setIsMenuOpen(false);
-    setActiveDropdown(null);
+    setIsDesktopDropdownOpen(false);
+    setIsMobileDropdownOpen(false);
   };
 
   return (
@@ -57,22 +59,20 @@ const Header = () => {
               </Link>
             ))}
 
-            <div className="relative" ref={dropdownRef}>
+            <div className="relative" ref={desktopDropdownRef}>
               <button
-                onClick={() =>
-                  setActiveDropdown(activeDropdown === "toko" ? null : "toko")
-                }
+                onClick={() => setIsDesktopDropdownOpen((prev) => !prev)}
                 className="flex items-center text-gray-600 hover:text-brand-blue font-medium px-4 py-2 relative group"
               >
                 Toko Online
                 <ChevronDown
                   className={`w-4 h-4 ml-1 transition-transform duration-200 ${
-                    activeDropdown === "toko" ? "rotate-180" : ""
+                    isDesktopDropdownOpen ? "rotate-180" : ""
                   }`}
                 />
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out" />
               </button>
-              {activeDropdown === "toko" && (
+              {isDesktopDropdownOpen && (
                 <div className="absolute left-1/2 -translate-x-1/2 mt-4 w-48 bg-white rounded-md shadow-lg py-1 ring-1 ring-black ring-opacity-5">
                   {dropdownLinks.map((link) => (
                     <a
@@ -81,7 +81,7 @@ const Header = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-yellow"
-                      onClick={() => setActiveDropdown(null)}
+                      onClick={() => setIsDesktopDropdownOpen(false)}
                     >
                       {link.name}
                     </a>
@@ -111,6 +111,7 @@ const Header = () => {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <nav className="md:hidden bg-slate-50 border-t divide-y divide-gray-200">
           {navLinks.map((link) => (
@@ -124,24 +125,19 @@ const Header = () => {
             </Link>
           ))}
 
-          {/* Dropdown Toko Online untuk Mobile */}
           <div>
             <button
-              onClick={() =>
-                setActiveDropdown(
-                  activeDropdown === "mobile-toko" ? null : "mobile-toko"
-                )
-              }
+              onClick={() => setIsMobileDropdownOpen((prev) => !prev)}
               className="w-full flex justify-between items-center px-4 py-3 text-gray-700 hover:bg-gray-100"
             >
               <span>Toko Online</span>
               <ChevronDown
                 className={`w-5 h-5 transition-transform ${
-                  activeDropdown === "mobile-toko" ? "rotate-180" : ""
+                  isMobileDropdownOpen ? "rotate-180" : ""
                 }`}
               />
             </button>
-            {activeDropdown === "mobile-toko" && (
+            {isMobileDropdownOpen && (
               <div className="bg-gray-100 pl-8 pr-4 py-2">
                 {dropdownLinks.map((link) => (
                   <a
