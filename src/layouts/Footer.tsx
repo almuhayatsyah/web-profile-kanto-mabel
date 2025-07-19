@@ -166,6 +166,17 @@ const Footer = () => {
             © {new Date().getFullYear()} Mebel KANTO. All rights reserved.
           </p>
         </div>
+        <div className="mt-2 text-sm text-gray-400 mt-12 pt-2 text-center">
+          Developer by 💻{" "}
+          <a
+            href="https://yourportfolio.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-brand-blue hover:underline"
+          >
+            Almuhayatsyah & Dzakkiansyah
+          </a>
+        </div>
       </div>
     </footer>
   );

@@ -3,27 +3,19 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import MabelKanonto from "../asset/img/mabelkanto.png";
+import OxsanFoto from "../asset/img/team/oxsan.jpg";
+import TomiFoto from "../asset/img/team/tomidasra.webp";
 
 const team = [
   {
-    name: "Budi Santoso",
-    role: "Direktur Utama",
-    photo: "https://randomuser.me/api/portraits/men/11.jpg",
+    name: "Oxsan",
+    role: "Branch Manager",
+    photo: OxsanFoto,
   },
   {
-    name: "Siti Aminah",
-    role: "Manajer Operasional",
-    photo: "https://randomuser.me/api/portraits/women/21.jpg",
-  },
-  {
-    name: "Rizky Pratama",
-    role: "Kepala Produksi",
-    photo: "https://randomuser.me/api/portraits/men/32.jpg",
-  },
-  {
-    name: "Dewi Lestari",
-    role: "Kepala Desain",
-    photo: "https://randomuser.me/api/portraits/women/45.jpg",
+    name: "Tomy Dasra",
+    role: "Manager Officer",
+    photo: TomiFoto,
   },
 ];
 
@@ -38,8 +30,8 @@ const AboutPage = () => {
             alt="Logo Mebel KANTO"
             className="mx-auto mb-8 w-52 h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 object-contain"
           />
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
-            Kanto Mebel, Lebih dari Sekadar Furniture
+          <h1 className="text-4xl sm:text-2xl lg:text-3xl font-bold mb-6">
+            Kanto Mebel Lebih dari Sekadar Furniture
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Setiap meja, kursi, dan lemari kami bukan cuma barang tapi bagian
@@ -115,30 +107,21 @@ const AboutPage = () => {
 
       {/* Struktur Organisasi */}
       <section className="bg-gray-50 py-24">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Tim Inti Perusahaan
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-            Inilah orang-orang yang berperan penting dalam menjalankan
-            operasional dan visi Kanto Mebel setiap hari.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            {team.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:shadow-xl transition duration-300"
-              >
-                <img
-                  src={member.photo}
-                  alt={member.name}
-                  className="w-24 h-24 rounded-full object-cover mb-4"
-                />
-                <h4 className="text-lg font-semibold">{member.name}</h4>
-                <p className="text-sm text-gray-600">{member.role}</p>
-              </div>
-            ))}
-          </div>
+        <div className="flex flex-wrap justify-center gap-10">
+          {team.map((member, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:shadow-xl transition duration-300"
+            >
+              <img
+                src={member.photo}
+                alt={member.name}
+                className="w-32 h-32 rounded-full object-cover mb-4"
+              />
+              <h4 className="text-lg font-semibold">{member.name}</h4>
+              <p className="text-sm text-gray-600">{member.role}</p>
+            </div>
+          ))}
         </div>
       </section>
 

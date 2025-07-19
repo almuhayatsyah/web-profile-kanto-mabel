@@ -1,17 +1,18 @@
 import { Building, Mail, Phone } from "lucide-react";
+
 const ContactPage = () => {
   return (
     <section id="kontak" className="bg-gray-50 py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mb-12 text-center">
-          <h2 className="tejxt-4xl font-bold text-gray-900">Hubungi Kami</h2>
+          <h2 className="text-4xl font-bold text-gray-900">Hubungi Kami</h2>
           <p className="mt-3 text-lg text-gray-600">
             Ada pertanyaan? Tim kami siap bantu kapan pun.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-          {/* Kartu Informasi Kontak */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Kiri: Informasi Kontak + Google Maps */}
           <div className="grid gap-6">
             <ContactCard
               icon={<Building className="h-6 w-6 text-brand-blue" />}
@@ -26,11 +27,25 @@ const ContactPage = () => {
             <ContactCard
               icon={<Mail className="h-6 w-6 text-brand-blue" />}
               title="Email"
-              desc="kontak@mebelkanto.com"
+              desc="kantomebel@gmail.com"
             />
+
+            {/* Google Maps Embed */}
+            <div className="rounded-lg overflow-hidden shadow-sm">
+              <iframe
+                title="Lokasi Mebel KANTO"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.832121961944!2d95.3192994741743!3d5.548290994452401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304037a5042f9177%3A0x71176c7ad2a87f26!2sTeuku%20Umar%2C%20Banda%20Aceh!5e0!3m2!1sid!2sid!4v1721295488000!5m2!1sid!2sid"
+                width="100%"
+                height="250"
+                className="w-full h-[250px] border-0"
+                loading="lazy"
+                allowFullScreen={false}
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
 
-          {/* Formulir Kontak */}
+          {/* Kanan: Formulir Kontak */}
           <div className="rounded-xl bg-white p-8 shadow-md">
             <h3 className="mb-6 text-2xl font-semibold text-gray-800">
               Kirim Pesan
@@ -50,12 +65,12 @@ const ContactPage = () => {
                   name="message"
                   id="message"
                   rows={4}
-                  className="mt-2 w-full rounded-md border border-gray-300 px-4 py-2 text-sm focus:border-brand-blue focus:ring-brand-blue"
+                  className="mt-2 w-full rounded-md border border-gray-300 px-4 py-2 text-sm text-gray-900 focus:border-brand-blue focus:ring-brand-blue"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="mt-4 w-full rounded-md bg-brand-blue px-4 py-2.5 text-white hover:bg-opacity-90"
+                className="mt-4 w-full rounded-md bg-brand-blue px-4 py-2.5 text-white hover:bg-opacity-90 transition"
               >
                 Kirim Pesan
               </button>
@@ -67,6 +82,7 @@ const ContactPage = () => {
   );
 };
 
+// Komponen Kartu Kontak
 const ContactCard = ({
   icon,
   title,
@@ -85,7 +101,7 @@ const ContactCard = ({
   </div>
 );
 
-// Komponen input form
+// Komponen Input Form
 const Input = ({
   label,
   name,

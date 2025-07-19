@@ -35,7 +35,7 @@ const VisiMisi = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-start">
           {/* Kolom Visi */}
           <div className="lg:col-span-1 text-center lg:text-left">
-            <h2 className="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-4">
+            <h2 className="text-sm font-semibold uppercase tracking-widest text-blue-500 mb-4">
               Visi Kami
             </h2>
             <p className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
@@ -49,7 +49,7 @@ const VisiMisi = () => {
 
           {/* Kolom Misi */}
           <div className="lg:col-span-2">
-            <h2 className="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-8 text-center lg:text-left">
+            <h2 className="text-sm font-semibold uppercase tracking-widest text-red-500 mb-8 text-center lg:text-left">
               Misi Kami
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">

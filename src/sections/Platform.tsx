@@ -1,10 +1,10 @@
-import logoBelapengadaan from "../asset/img/belapengadaan.png";
-import logoBlibli from "../asset/img/blibli.png";
-import logoEcatalog from "../asset/img/ecatalog.png";
-import logoLpse from "../asset/img/lpse.png";
-import logoPadiumkm from "../asset/img/padiumkm.png";
-import logoShopee from "../asset/img/shopee.png";
-import logoTokopedia from "../asset/img/tokopedia.png";
+import logoBelapengadaan from "../asset/img/platforms/belapengadaan.png";
+import logoBlibli from "../asset/img/platforms/blibli.png";
+import logoEcatalog from "../asset/img/platforms/ecatalog.png";
+import logoLpse from "../asset/img/platforms/lpse.png";
+import logoPadiumkm from "../asset/img/platforms/padiumkm.png";
+import logoShopee from "../asset/img/platforms/shopee.png";
+import logoTokopedia from "../asset/img/platforms/tokopedia.png";
 
 const platforms = [
   { name: "Blibli", logo: logoBlibli },

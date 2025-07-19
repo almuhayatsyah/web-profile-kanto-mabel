@@ -4,22 +4,30 @@ const Clients = () => {
   return (
     <div className="bg-white py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:max-w-none text-center">
-          <h2 className="text-2xl font-bold text-gray-900 sm:text-4xl">
-            Dipercaya oleh Instansi Ternama
-          </h2>
-          <p className="mt-4 text-base text-gray-500">
-            Terlibat langsung dalam pengadaan furnitur untuk lembaga strategis
-            di Indonesia.
-          </p>
-        </div>
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
+          <div className="w-full lg:w-7/12">
+            <img
+              src={logoInstansi}
+              alt="Logo Instansi"
+              className="object-contain w-full max-h-[400px] rounded-xl shadow-lg border border-gray-200"
+            />
+          </div>
+          <div className="w-full lg:w-5/12 text-center lg:text-left">
+            <h2 className="text-base font-semibold leading-7 text-brand-blue">
+              Di Percaya Instansi Pemerintahan
+            </h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Membangun Kepercayaan Melalui Kualitas
+            </p>
+            <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+              Kami dipercaya dalam pengadaan furnitur untuk berbagai lembaga
+              pemerintah dan perusahaan nasional. Komitmen kami adalah
+              menghadirkan kualitas dan pelayanan terbaik.
+            </p>
 
-        <div className="mx-auto mt-16 flex justify-center items-center">
-          <img
-            src={logoInstansi}
-            alt="Logo Instansi"
-            className="object-contain max-w-4xl w-full h-auto rounded-lg shadow-sm"
-          />
+            {/* Garis dekoratif */}
+            <div className="mt-6 w-28 h-1 bg-brand-blue rounded-full mx-auto lg:mx-0"></div>
+          </div>
         </div>
       </div>
     </div>

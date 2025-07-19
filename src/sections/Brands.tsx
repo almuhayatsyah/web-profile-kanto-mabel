@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-// Data Produk berdasarkan Merek
 type Product = {
   name: string;
   image: string;
@@ -13,12 +12,31 @@ type Brand = {
 
 const brandsData: Brand[] = [
   {
+    name: "Kanto Mebel",
+    products: [
+      {
+        name: "Kursi Kantor",
+        image: "https://indachi.co.id/wp-content/uploads/2014/11/DSC00356.jpg",
+      },
+      {
+        name: "Meja Kantor",
+        image:
+          "https://inverio.co.id/wp-content/uploads/2021/12/Modera-COD-106.jpeg",
+      },
+      {
+        name: "Lemari Arsip",
+        image:
+          "https://down-id.img.susercontent.com/file/sg-11134201-23030-rqu52k1r9qov11",
+      },
+    ],
+  },
+  {
     name: "Indachi",
     products: [
       {
-        name: "Kursi Kantor Ergonomis",
+        name: "Kursi Kantor",
         image:
-          "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?q=80&auto=format&fit=crop&h=300&w=400",
+          "https://megahfurniture.com/wp-content/uploads/2024/03/INDACHI-ELTIUM-II-TC.jpg",
       },
       {
         name: "Meja Kerja Modern",
@@ -28,7 +46,47 @@ const brandsData: Brand[] = [
       {
         name: "Lemari Arsip ",
         image:
-          "https://images.unsplash.com/photo-1585030044487-7c7b8b5c9b31?q=80&auto=format&fit=crop&h=300&w=400",
+          "https://images.tokopedia.net/img/cache/700/product-1/2018/9/16/767682/767682_70b8bb16-a9fe-477b-a018-9619dadd0bfb_709_709.jpg",
+      },
+    ],
+  },
+  {
+    name: "Subaru",
+    products: [
+      {
+        name: "Sofa Minimalis",
+        image:
+          "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//105/MTA-3099938/subaru_subaru-sofa-arisa-3-seater_full03.jpg",
+      },
+      {
+        name: "Kursi Kantor",
+        image:
+          "https://inverio.co.id/wp-content/uploads/2022/02/KURSI-KANTOR-DIREKTUR-SUBARU-ES-40-600x600.jpg",
+      },
+      {
+        name: "Rak Buku Modern",
+        image:
+          "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?q=80&auto=format&fit=crop&h=300&w=400",
+      },
+    ],
+  },
+  {
+    name: "Futura",
+    products: [
+      {
+        name: "Kursi empuk",
+        image:
+          "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/Simpati-Furniture_futura-405-merah-kursi-susun-12-pcs_full01.jpg",
+      },
+      {
+        name: "Meja Kopi Kayu Jati",
+        image:
+          "https://media.monotaro.id/mid01/big/Kebutuhan%20Kantor/Furnitur/Meja%20Kantor%2FKomersial/Meja%20untuk%20Kantor/Futura%20Meja%20Sekolah%20Seri%20MJ%20FTR%20607/8fP105055303-1.jpg",
+      },
+      {
+        name: "Rak Buku Modern",
+        image:
+          "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?q=80&auto=format&fit=crop&h=300&w=400",
       },
     ],
   },
@@ -36,19 +94,18 @@ const brandsData: Brand[] = [
     name: "Chitose",
     products: [
       {
-        name: "Kursi Kantor",
+        name: "Kursi dan meja Sekolah",
         image:
-          "https://images.unsplash.com/photo-1519947486511-46149fa0a254?q=80&auto=format&fit=crop&h=300&w=400",
+          "https://media.monotaro.id/mid01/big/Kebutuhan%20Kantor/Furnitur/Meja%20Kantor%2FKomersial/Meja%20untuk%20Kantor/Chitose%20School%20Furniture%20Table%20Ayumi%20Series%20(Table%20Only)/23P101509075-5.jpg",
       },
       {
-        name: "Meja Belajar Lipat",
+        name: "Meja cafeshoop",
         image:
-          "https://images.pexels.com/photos/190537/pexels-photo-190537.jpeg?auto=compress&cs=tinysrgb&h=300&w=400",
+          "https://xavierhomedecor.com/cdn/shop/products/chitose2_800x.jpg?v=1629784969",
       },
       {
-        name: "Kursi Gamin",
-        image:
-          "https://images.unsplash.com/photo-1505826759037-406b40feb4cd?q=80&auto=format&fit=crop&h=300&w=400",
+        name: "Kursi Couple",
+        image: "https://chitose.id/wp-content/uploads/2023/12/kogu-kt-02.jpg",
       },
     ],
   },
@@ -58,17 +115,17 @@ const brandsData: Brand[] = [
       {
         name: "Sofa Ruang Tamu",
         image:
-          "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&auto=format&fit=crop&h=300&w=400",
+          "https://pbs.twimg.com/media/C6yOC2xWkAEwUD1?format=jpg&name=4096x4096",
       },
       {
-        name: "Kursi Cafe Industrial",
+        name: "Kursi Kantor Industrial",
         image:
-          "https://images.unsplash.com/photo-1551029015-55104c464a48?q=80&auto=format&fit=crop&h=300&w=400",
+          "https://oscarliving.co.id/cdn/shop/files/kursi-direktur-kursi-kantor-savello-soliter-h-savello-shopname-820538.jpg?v=1712425317",
       },
       {
-        name: "Meja Rapat Besar",
+        name: "Kursi Gaming",
         image:
-          "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&auto=format&fit=crop&h=300&w=400",
+          "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/101/MTA-157205494/brd-44261_kursi-gaming-kursi-ergonomis-kursi_full01-e67b7048.jpg",
       },
     ],
   },
@@ -79,35 +136,37 @@ const Brands: React.FC = () => {
 
   return (
     <section id="brands" className="bg-slate-50 py-16 sm:py-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-base font-semibold leading-7 text-brand-blue">
+          <h2 className="text-base font-semibold text-brand-blue">
             Merek Pilihan Kami
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">
             Kualitas Terjamin dari Merek Terpercaya
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-4 text-lg text-gray-600">
             Kami bekerja sama dengan berbagai merek ternama untuk menyediakan
             solusi furnitur terbaik yang sesuai dengan kebutuhan dan anggaran
             Anda.
           </p>
         </div>
 
-        <div className="mt-12 border-b border-gray-200">
+        {/* Tabs */}
+        <div className="mt-10 border-b border-gray-200">
           <nav
-            className="-mb-px flex justify-center space-x-6 sm:space-x-8"
+            className="flex flex-wrap justify-center gap-4"
             aria-label="Tabs"
           >
             {brandsData.map((brand) => (
               <button
                 key={brand.name}
                 onClick={() => setActiveTab(brand.name)}
-                className={`$${
+                className={`${
                   activeTab === brand.name
-                    ? "border-brand-blue text-brand-blue"
-                    : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
-                } whitespace-nowrap border-b-2 py-4 px-1 text-base sm:text-lg font-medium transition-colors`}
+                    ? "border-b-2 border-brand-blue text-brand-blue"
+                    : "text-gray-500 hover:text-gray-700"
+                } px-4 py-2 text-sm sm:text-base font-medium transition-colors`}
               >
                 {brand.name}
               </button>
@@ -115,25 +174,31 @@ const Brands: React.FC = () => {
           </nav>
         </div>
 
-        <div className="mt-16">
+        {/* Content */}
+        <div className="mt-12">
           {brandsData.map((brand) => (
             <div
               key={brand.name}
               className={activeTab === brand.name ? "block" : "hidden"}
             >
-              <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 gap-x-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 {brand.products.map((product) => (
-                  <div key={product.name} className="group">
-                    <div className="aspect-video overflow-hidden rounded-xl shadow-lg">
+                  <div
+                    key={product.name}
+                    className="group rounded-xl shadow-md bg-white hover:shadow-lg transition duration-300"
+                  >
+                    <div className="aspect-video overflow-hidden rounded-t-xl">
                       <img
                         src={product.image}
                         alt={product.name}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
-                    <h3 className="mt-4 text-center text-lg font-semibold text-gray-900">
-                      {product.name}
-                    </h3>
+                    <div className="p-4 text-center">
+                      <h3 className="text-lg font-semibold text-gray-800">
+                        {product.name}
+                      </h3>
+                    </div>
                   </div>
                 ))}
               </div>

@@ -6,6 +6,7 @@ import Hero from "../sections/Hero";
 import Platform from "../sections/Platform";
 import Products from "../sections/Products";
 import VisiMisi from "../sections/VisiMisi";
+import Merek from "../sections/Merek";
 
 const LandingPage = () => {
   return (
@@ -17,6 +18,7 @@ const LandingPage = () => {
       <VisiMisi />
       <Clients />
       <Products />
+      <Merek />
       <Brands />
     </>
   );
