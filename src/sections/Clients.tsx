@@ -2,7 +2,7 @@ import logoInstansi from "../asset/img/clients/logoInstansi.png";
 
 const Clients = () => {
   return (
-    <div className="bg-white py-16 sm:py-24">
+    <div className="bg-white py-16 sm:py-19">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           <div className="w-full lg:w-7/12">

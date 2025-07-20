@@ -7,10 +7,11 @@ import { useOnClickOutside } from "../hooks/useOnClickOutside";
 const navLinks = [
   { name: "Beranda", href: "/" },
   { name: "Tentang", href: "/tentang" },
+  { name: "Kontak", href: "/kontak" },
 ];
 
 const dropdownLinks = [
-  { name: "e-Catalogue", href: "#" }, // Pastikan href diisi link yang benar nanti
+  { name: "e-Catalogue", href: "#" },
   { name: "Blibli", href: "#" },
   { name: "Tokopedia", href: "#" },
   { name: "Shopee", href: "#" },
@@ -36,14 +37,14 @@ const Header = () => {
   return (
     <header className="bg-slate-50 shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 sm:h-16 md:h-20">
           <div className="flex-shrink-0">
             <Link
               to="/"
               onClick={closeAllMenus}
               className="flex items-center gap-2"
             >
-              <img src={logo} alt="Logo Mebel KANTO" className="h-16 w-auto" />
+              <img src={logo} alt="Logo Mebel KANTO" className="h-12 w-auto" />
             </Link>
           </div>
 

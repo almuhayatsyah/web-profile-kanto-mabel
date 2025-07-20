@@ -1,8 +1,8 @@
 import logomerek from "../asset/img/merek/merek.png";
 
-const Clients = () => {
+const Merek = () => {
   return (
-    <div className="bg-gray-50 py-16 sm:py-24">
+    <div className="bg-gray-50 py-16 sm:py-19">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none text-center">
           <h2 className="text-base font-semibold leading-7 text-brand-blue">
@@ -43,4 +43,4 @@ const Clients = () => {
   );
 };
 
-export default Clients;
+export default Merek;

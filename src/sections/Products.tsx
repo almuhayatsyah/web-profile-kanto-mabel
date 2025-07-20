@@ -22,7 +22,7 @@ const products = [
 
 const Products = () => {
   return (
-    <section id="products" className="bg-white py-16 sm:py-24">
+    <section id="products" className="bg-white py-16 sm:py-19">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-base font-semibold leading-7 text-brand-blue">

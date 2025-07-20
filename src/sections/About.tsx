@@ -23,7 +23,7 @@ const features = [
 
 const About = () => {
   return (
-    <section id="about" className="bg-white py-20 sm:py-28">
+    <section id="about" className="bg-white py-14 sm:py-19">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Kolom Gambar Slider */}
         <div className="w-full">

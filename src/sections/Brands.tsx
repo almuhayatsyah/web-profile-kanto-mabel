@@ -135,7 +135,7 @@ const Brands: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>(brandsData[0].name);
 
   return (
-    <section id="brands" className="bg-slate-50 py-16 sm:py-24">
+    <section id="brands" className="bg-slate-50 py-16 sm:py-19">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="max-w-3xl mx-auto text-center">
@@ -206,6 +206,25 @@ const Brands: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {/* CTA Section */}
+      <section className="bg-slate-50 py-20">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Temukan Merek Terbaik untuk Ruang Anda
+          </h2>
+          <p className="text-gray-600 max-w-xl mx-auto mb-8">
+            Konsultasi sekarang dan mulai wujudkan desain ruang impian Anda
+            bersama Kanto Mebel.
+          </p>
+          <a
+            href="/kontak"
+            className="inline-block bg-brand-blue hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-md shadow"
+          >
+            Hubungi Kami
+          </a>
+        </div>
+      </section>
     </section>
   );
 };

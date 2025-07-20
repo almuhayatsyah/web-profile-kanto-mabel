@@ -18,7 +18,7 @@ const platforms = [
 
 const Platform = () => {
   return (
-    <section className="bg-slate-50 py-16 sm:py-24">
+    <section className="bg-slate-50 py-16 sm:py-19">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
         <h2 className="text-base font-semibold leading-7 text-brand-blue">
           Layanan Pengadaan

@@ -174,7 +174,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-brand-blue hover:underline"
           >
-            Almuhayatsyah & Dzakkiansyah
+            scoded.dev
           </a>
         </div>
       </div>
