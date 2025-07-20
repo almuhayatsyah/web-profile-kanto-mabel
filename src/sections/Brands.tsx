@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MebelKantoLogo from "../asset/img/mabelkanto.png";
 
 type Product = {
   name: string;
@@ -7,12 +8,14 @@ type Product = {
 
 type Brand = {
   name: string;
+  logo?: string;
   products: Product[];
 };
 
 const brandsData: Brand[] = [
   {
     name: "Kanto Mebel",
+    logo: MebelKantoLogo,
     products: [
       {
         name: "Kursi Kantor",
@@ -32,19 +35,23 @@ const brandsData: Brand[] = [
   },
   {
     name: "Indachi",
+    logo: MebelKantoLogo,
     products: [
       {
         name: "Kursi Kantor",
+
         image:
           "https://megahfurniture.com/wp-content/uploads/2024/03/INDACHI-ELTIUM-II-TC.jpg",
       },
       {
         name: "Meja Kerja Modern",
+
         image:
           "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?q=80&auto=format&fit=crop&h=300&w=400",
       },
       {
         name: "Lemari Arsip ",
+
         image:
           "https://images.tokopedia.net/img/cache/700/product-1/2018/9/16/767682/767682_70b8bb16-a9fe-477b-a018-9619dadd0bfb_709_709.jpg",
       },
@@ -52,19 +59,23 @@ const brandsData: Brand[] = [
   },
   {
     name: "Subaru",
+    logo: MebelKantoLogo,
     products: [
       {
         name: "Sofa Minimalis",
+
         image:
           "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//105/MTA-3099938/subaru_subaru-sofa-arisa-3-seater_full03.jpg",
       },
       {
         name: "Kursi Kantor",
+
         image:
           "https://inverio.co.id/wp-content/uploads/2022/02/KURSI-KANTOR-DIREKTUR-SUBARU-ES-40-600x600.jpg",
       },
       {
         name: "Rak Buku Modern",
+
         image:
           "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?q=80&auto=format&fit=crop&h=300&w=400",
       },
@@ -72,19 +83,23 @@ const brandsData: Brand[] = [
   },
   {
     name: "Futura",
+    logo: MebelKantoLogo,
     products: [
       {
         name: "Kursi empuk",
+
         image:
           "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/Simpati-Furniture_futura-405-merah-kursi-susun-12-pcs_full01.jpg",
       },
       {
         name: "Meja Kopi Kayu Jati",
+
         image:
           "https://media.monotaro.id/mid01/big/Kebutuhan%20Kantor/Furnitur/Meja%20Kantor%2FKomersial/Meja%20untuk%20Kantor/Futura%20Meja%20Sekolah%20Seri%20MJ%20FTR%20607/8fP105055303-1.jpg",
       },
       {
         name: "Rak Buku Modern",
+
         image:
           "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?q=80&auto=format&fit=crop&h=300&w=400",
       },
@@ -92,38 +107,46 @@ const brandsData: Brand[] = [
   },
   {
     name: "Chitose",
+    logo: MebelKantoLogo,
     products: [
       {
         name: "Kursi dan meja Sekolah",
+
         image:
           "https://media.monotaro.id/mid01/big/Kebutuhan%20Kantor/Furnitur/Meja%20Kantor%2FKomersial/Meja%20untuk%20Kantor/Chitose%20School%20Furniture%20Table%20Ayumi%20Series%20(Table%20Only)/23P101509075-5.jpg",
       },
       {
         name: "Meja cafeshoop",
+
         image:
           "https://xavierhomedecor.com/cdn/shop/products/chitose2_800x.jpg?v=1629784969",
       },
       {
         name: "Kursi Couple",
+
         image: "https://chitose.id/wp-content/uploads/2023/12/kogu-kt-02.jpg",
       },
     ],
   },
   {
     name: "Savello",
+    logo: MebelKantoLogo,
     products: [
       {
         name: "Sofa Ruang Tamu",
+
         image:
           "https://pbs.twimg.com/media/C6yOC2xWkAEwUD1?format=jpg&name=4096x4096",
       },
       {
         name: "Kursi Kantor Industrial",
+
         image:
           "https://oscarliving.co.id/cdn/shop/files/kursi-direktur-kursi-kantor-savello-soliter-h-savello-shopname-820538.jpg?v=1712425317",
       },
       {
         name: "Kursi Gaming",
+
         image:
           "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/101/MTA-157205494/brd-44261_kursi-gaming-kursi-ergonomis-kursi_full01-e67b7048.jpg",
       },
@@ -187,6 +210,18 @@ const Brands: React.FC = () => {
                     key={product.name}
                     className="group rounded-xl shadow-md bg-white hover:shadow-lg transition duration-300"
                   >
+                    {/* Logo Brand di atas gambar */}
+                    {brand.logo && (
+                      <div className="py-6 flex justify-center">
+                        <img
+                          src={brand.logo}
+                          alt={`${brand.name} logo`}
+                          className="h-10 w-auto object-contain max-w-[150px]"
+                        />
+                      </div>
+                    )}
+
+                    {/* Gambar Produk */}
                     <div className="aspect-video overflow-hidden rounded-t-xl">
                       <img
                         src={product.image}
@@ -194,7 +229,9 @@ const Brands: React.FC = () => {
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
-                    <div className="p-4 text-center">
+
+                    {/* Nama Produk */}
+                    <div className="p-2 text-center">
                       <h3 className="text-lg font-semibold text-gray-800">
                         {product.name}
                       </h3>

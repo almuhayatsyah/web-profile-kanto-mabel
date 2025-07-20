@@ -2,9 +2,11 @@ import { Award, Handshake, Target } from "lucide-react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+// import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 import MabelKanonto from "../asset/img/mabelkanto.png";
 import OxsanFoto from "../asset/img/team/oxsan.jpg";
-import TomiFoto from "../asset/img/team/tomidasra.webp";
+import TomiFoto from "../asset/img/team/tomidasra.png";
 
 const team = [
   { name: "Oxsan", role: "Branch Manager", photo: OxsanFoto },
@@ -97,7 +99,7 @@ const AboutPage = () => {
 
       {/* Struktur Organisasi */}
       <section className="bg-gray-50 py-12">
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-6 container mx-auto px-4">
           {team.map((member, idx) => (
             <div
               key={idx}
@@ -106,8 +108,9 @@ const AboutPage = () => {
               <img
                 src={member.photo}
                 alt={member.name}
-                className="w-24 h-24 rounded-full object-cover mb-3"
+                className="w-32 h-32 sm:w-36 sm:h-36 rounded-full object-cover p-1 bg-white mt-4 mb-4"
               />
+
               <h4 className="text-base font-semibold">{member.name}</h4>
               <p className="text-sm text-gray-600">{member.role}</p>
             </div>
